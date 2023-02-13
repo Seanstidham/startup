@@ -9,3 +9,7 @@
 
 ![grU4VrTscKgjJRMgUU6wiH-1200-80](https://user-images.githubusercontent.com/123608245/217030986-e80c83bd-45ed-457b-a6c0-023753a0cab6.jpg)
 I enjoyed figuring out how to apply all the changes to my wesbite, definitely a challenge
+
+
+Main things with CSS use https://www.quackit.com/css/css_color_codes.cfm for color hex codes
+remember different sections for easier and more concise work. 
