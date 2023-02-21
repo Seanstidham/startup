@@ -13,3 +13,6 @@ I enjoyed figuring out how to apply all the changes to my wesbite, definitely a 
 
 Main things with CSS use https://www.quackit.com/css/css_color_codes.cfm for color hex codes
 remember different sections for easier and more concise work. 
+
+don't put repositories inside of other repositories -keep them in seperate folders
+make the ui design clean and not gross, not all over then place with things like color and everything
