@@ -1,1 +1,19 @@
+body {
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  #wheel {
+    display: inline-block;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 800px;
+    margin-top: 3%;
+    transition: transform 10s cubic-bezier(.5,.1,.15,1);
+    transform: rotate(0deg);
+    z-index: 1;
+    pointer-events: none;
+  }
+
 
