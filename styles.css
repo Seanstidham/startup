@@ -16,4 +16,19 @@ body {
     pointer-events: none;
   }
 
-
+  #button {
+    font-size: 24px;
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+    color: white;
+    background: #000000;
+    border: none;
+    display: inline-block;
+    margin: 25px;
+    z-index: 3;
+  }
+  
+  #button:hover, #button:focus {
+    background: #000000;
+  }
