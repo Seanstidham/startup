@@ -1,3 +1,35 @@
-<img src="https://user-images.githubusercontent.com/123608245/221279586-f88dbd66-f986-49ea-9af1-7c46285a2cbb.png" id="wheel"><br>
-
-<button id="button">Test your Fate</button>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter Your Name</title>
+</head>
+<body>
+	<h1>Please enter your name:</h1>
+	<form onsubmit="return nextPage()" id="form">
+		<input type="text" name="name" required>
+		<button type="submit">Next</button>
+	</form>
+	<script>
+		function nextPage() {
+			var name = document.forms["form"]["name"].value;
+			
+			if (name == "") {
+				alert("Please enter your name.");
+				return false;
+			}
+			
+			location.href = "next-page.html";
+			return true;
+		}
+	</script>
+	
+	<h1>Your Fate</h1>
+	<img src="https://user-images.githubusercontent.com/123608245/221279586-f88dbd66-f986-49ea-9af1-7c46285a2cbb.png" id="wheel"><br>
+	<button id="button">Test your Fate</button>
+	<script>
+		document.getElementById("button").addEventListener("click", function() {
+			alert("Your fate has been tested!");
+		});
+	</script>
+</body>
+</html>
