@@ -16,3 +16,14 @@ remember different sections for easier and more concise work.
 
 don't put repositories inside of other repositories -keep them in seperate folders
 make the ui design clean and not gross, not all over then place with things like color and everything
+
+
+//authentication notes/layout used for html file
+
+//main screen of entering your name
+//check if name is not empty
+//send to next page
+//eventually will do something to where it remembers the name and will actually probably update it in the future to where its via email authentication
+//will be done either through special characters or just main + strings
+//and later figure out how to blacklist names upon hitting the death mark
+//but for now it will just take you to the wheel image with the button
