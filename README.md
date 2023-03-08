@@ -27,3 +27,22 @@ make the ui design clean and not gross, not all over then place with things like
 //will be done either through special characters or just main + strings
 //and later figure out how to blacklist names upon hitting the death mark
 //but for now it will just take you to the wheel image with the button
+
+
+
+Startup To Do List:
+HTML:
+Create 3 more html files each linking to the main login screen, the game itself, and the scores screen
+add a peg to the file to show where the wheel stops
+CSS:
+Create css files for each
+fix the wheel, making it an actual png file rather than the garbage it currently is
+idk if the spin animation is added through css or js
+JS:
+Make sure all the pages line up ie when you click on a different one it works
+all the buttons are functional
+code the wheel to be either a win or lose depending on color/space
+make sure the score tallys up and saves
+displays score when you lose
+
+
