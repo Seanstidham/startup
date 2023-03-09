@@ -28,6 +28,44 @@ make the ui design clean and not gross, not all over then place with things like
 //and later figure out how to blacklist names upon hitting the death mark
 //but for now it will just take you to the wheel image with the button
 
+MIDTERM NOTES
+Regex notes:
+The string class has several functions that accept regular expressions. This includes match, replace, search, and split. For a quick test to see if there is a match you can use the regular expression object's test function.
+/    /
+flags:
+g -global/more than once
+i -case insensitive
+m -multiline
+s -singleline
+x -extended
+u -ungreedy
+
+ex of adding Javascript to HTML
+<head>
+  <script src="javascript.js"></script>
+</head>
+<body>
+  <button onclick="sayHello()">Say Hello</button>
+  <button onclick="sayGoodbye()">Say Goodbye</button>
+  <script>
+    function sayGoodbye() {
+      alert('Goodbye');
+    }
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Startup To Do List:
