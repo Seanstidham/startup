@@ -42,13 +42,17 @@
       <body>
         <h1>Give it a spin!</h1>
         <img src="https://static.vecteezy.com/system/resources/previews/001/192/278/non_2x/rainbow-spinning-wheel-png.png">
-        <button style="margin-top: 0.5in;">Spin</button>
+        <button id="spin-button" style="margin-top: 0.5in;">Spin</button>
+        <div>
+          <label for="num-spins"># of spins:</label>
+          <input type="text" id="num-spins" value="0" readonly>
+        </div>
+        <script src="game.js"></script>
       </body>
       
 
   
-      <!-- Script is located at the bottom because it references HTML elements during initialization -->
-      <script src=""></script>
-    </body>
+     
+      
   </html>
   
