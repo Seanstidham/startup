@@ -21,7 +21,7 @@ function rotateImage() {
       image.style.transform = `rotate(${newRotation}deg)`;
       image.classList.remove('spin');
 
-      document.body.appendChild(document.createTextNode('Winner'));
+      document.body.appendChild(document.createTextNode('Winner '));
     }, 1000);
   }
 }
