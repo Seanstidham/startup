@@ -4,10 +4,11 @@ function loadScores() {
     if (scoresText) {
       scores = JSON.parse(scoresText);
     }
-  //first checks the storage to see if theres data
+  
     const tableBodyEl = document.querySelector('#scores');
   
     if (scores.length) {
+      tableBodyEl.innerHTML = '';
       for (const [i, score] of scores.entries()) {
         const positionTdEl = document.createElement('td');
         const nameTdEl = document.createElement('td');
@@ -28,46 +29,32 @@ function loadScores() {
         tableBodyEl.appendChild(rowEl);
       }
     } else {
-      tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+      tableBodyEl.innerHTML = '<tr><td colspan=4>Be the first to score</td></tr>';
     }
-    //if there is data then the function creates a table with the scores, if there is no data it tells you to be the first one to set the score 
   }
   
-  loadScores();
-  //its loads the table with the datafunction loadScores() {
-  let scores = [];
-  const scoresText = localStorage.getItem('scores');
-  if (scoresText) {
-    scores = JSON.parse(scoresText);
-  }
-//first checks the storage to see if theres data
-  const tableBodyEl = document.querySelector('#scores');
-
-  if (scores.length) {
-    for (const [i, score] of scores.entries()) {
-      const positionTdEl = document.createElement('td');
-      const nameTdEl = document.createElement('td');
-      const scoreTdEl = document.createElement('td');
-      const dateTdEl = document.createElement('td');
-
-      positionTdEl.textContent = i + 1;
-      nameTdEl.textContent = score.name;
-      scoreTdEl.textContent = score.score;
-      dateTdEl.textContent = score.date;
-
-      const rowEl = document.createElement('tr');
-      rowEl.appendChild(positionTdEl);
-      rowEl.appendChild(nameTdEl);
-      rowEl.appendChild(scoreTdEl);
-      rowEl.appendChild(dateTdEl);
-
-      tableBodyEl.appendChild(rowEl);
+  function saveScore(name, score, date) {
+    let scores = [];
+    const scoresText = localStorage.getItem('scores');
+    if (scoresText) {
+      scores = JSON.parse(scoresText);
     }
-  } else {
-    tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+  
+    scores.push({ name, score, date });
+    localStorage.setItem('scores', JSON.stringify(scores));
+  
+    loadScores();
   }
-  //if there is data then the function creates a table with the scores, if there is no data it tells you to be the first one to set the score 
-
-
-loadScores();
-//its loads the table with the data
+  
+  document.querySelector('#spin-btn').addEventListener('click', () => {
+    const name = document.querySelector('#name').value;
+    const score = Math.floor(Math.random() * 100) + 1;
+    const date = new Date().toLocaleDateString();
+  
+    if (name) {
+      alert(`Your score is ${score}`);
+      saveScore(name, score, date);
+    } else {
+      alert('Please enter your name');
+    }
+});
