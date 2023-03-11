@@ -1,60 +1,45 @@
-function loadScores() {
-    let scores = [];
-    const scoresText = localStorage.getItem('scores');
-    if (scoresText) {
-      scores = JSON.parse(scoresText);
+const image = document.querySelector('img');
+const spinButton = document.querySelector('#spin-button');
+const counterInput = document.querySelector('#num-spins');
+const message = document.querySelector('#message');
+let spinCount = 0;
+
+function rotateImage() {
+  spinCount++;
+  counterInput.value = spinCount;
+
+  const isLoser = Math.floor(Math.random() * 6) === 0;
+
+  if (isLoser) {
+    const failMessage = 'Fail';
+    message.appendChild(document.createTextNode(failMessage));
+
+    // Get player name
+    const playerName = prompt('Enter your name:');
+    if (playerName) {
+      // Get current date
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleDateString();
+      
+      // Print player score
+      const scoreMessage = `${playerName} scored ${spinCount} spins before receiving a ${failMessage} on ${formattedDate}.`;
+      message.appendChild(document.createElement('br'));
+      message.appendChild(document.createTextNode(scoreMessage));
     }
-  
-    const tableBodyEl = document.querySelector('#scores');
-  
-    if (scores.length) {
-      tableBodyEl.innerHTML = '';
-      for (const [i, score] of scores.entries()) {
-        const positionTdEl = document.createElement('td');
-        const nameTdEl = document.createElement('td');
-        const scoreTdEl = document.createElement('td');
-        const dateTdEl = document.createElement('td');
-  
-        positionTdEl.textContent = i + 1;
-        nameTdEl.textContent = score.name;
-        scoreTdEl.textContent = score.score;
-        dateTdEl.textContent = score.date;
-  
-        const rowEl = document.createElement('tr');
-        rowEl.appendChild(positionTdEl);
-        rowEl.appendChild(nameTdEl);
-        rowEl.appendChild(scoreTdEl);
-        rowEl.appendChild(dateTdEl);
-  
-        tableBodyEl.appendChild(rowEl);
-      }
-    } else {
-      tableBodyEl.innerHTML = '<tr><td colspan=4>Be the first to score</td></tr>';
-    }
+
+    spinButton.disabled = true;
+    counterInput.disabled = true;
+  } else {
+    image.classList.add('spin');
+    setTimeout(() => {
+      const currentRotation = parseInt(image.style.transform.replace(/[^0-9\-]/g,''));
+      const newRotation = (currentRotation + 30) % 360;
+      image.style.transform = `rotate(${newRotation}deg)`;
+      image.classList.remove('spin');
+
+      document.body.appendChild(document.createTextNode('Winner '));
+    }, 1000);
   }
-  
-  function saveScore(name, score, date) {
-    let scores = [];
-    const scoresText = localStorage.getItem('scores');
-    if (scoresText) {
-      scores = JSON.parse(scoresText);
-    }
-  
-    scores.push({ name, score, date });
-    localStorage.setItem('scores', JSON.stringify(scores));
-  
-    loadScores();
-  }
-  
-  document.querySelector('#spin-btn').addEventListener('click', () => {
-    const name = document.querySelector('#name').value;
-    const score = Math.floor(Math.random() * 100) + 1;
-    const date = new Date().toLocaleDateString();
-  
-    if (name) {
-      alert(`Your score is ${score}`);
-      saveScore(name, score, date);
-    } else {
-      alert('Please enter your name');
-    }
-});
+}
+
+spinButton.addEventListener('click', rotateImage);
