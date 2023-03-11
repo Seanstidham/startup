@@ -13,6 +13,8 @@ function rotateImage() {
     document.body.appendChild(document.createTextNode('Fail'));
     spinButton.disabled = true;
     counterInput.disabled = true;
+    saveScore(spinCount);
+    updateScore(spinCount);
   } else {
     image.classList.add('spin');
     setTimeout(() => {
@@ -28,38 +30,33 @@ function rotateImage() {
 
 spinButton.addEventListener('click', rotateImage);
 
-getPlayerName() {
+function getPlayerName() {
   return localStorage.getItem('userName') ?? 'Mystery player';
 }
 
-
-
-updateScore(score) {
+function updateScore(score) {
   const scoreEl = document.querySelector('#score');
   scoreEl.textContent = score;
 }
 
-
-
-
-getRandomButton() {
+function getRandomButton() {
   let buttons = Array.from(this.buttons.values());
   return buttons[Math.floor(Math.random() * this.buttons.size)];
 }
-//also manages saving the players score
-saveScore(score) {
-  const userName = this.getPlayerName();
+
+function saveScore(score) {
+  const userName = getPlayerName();
   let scores = [];
   const scoresText = localStorage.getItem('scores');
   if (scoresText) {
     scores = JSON.parse(scoresText);
   }
-  scores = this.updateScores(userName, score, scores);
+  scores = updateScores(userName, score, scores);
 
   localStorage.setItem('scores', JSON.stringify(scores));
 }
 
-updateScores(userName, score, scores) {
+function updateScores(userName, score, scores) {
   const date = new Date().toLocaleDateString();
   const newScore = { name: userName, score: score, date: date };
 
@@ -81,5 +78,4 @@ updateScores(userName, score, scores) {
   }
 
   return scores;
-}
 }
