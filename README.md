@@ -83,4 +83,6 @@ code the wheel to be either a win or lose depending on color/space
 make sure the score tallys up and saves
 displays score when you lose
 
+Update/notes as of startup js assignment:
 
+Haven't gotten it to blacklist you upon losing yet, I was more focused on getting the main thing to work. Am working on how to do. 
