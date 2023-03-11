@@ -36,16 +36,18 @@
       </nav>
     </header>
 
-    <body>
-      <h1>Spin Game</h1>
-      <img src="spinner.png" alt="Spinner" />
-      <br />
-      <label for="num-spins">Number of Spins:</label>
-      <input type="text" id="num-spins" value="0" readonly />
-      <br />
-      <button id="spin-button">Spin</button>
-      <div id="message"></div>
-    </body>
+    <main class="container-fluid bg-secondary text-center">
+      <table class="table table-warning table-striped-columns">
+        <thead class="table-dark">
+          <tr>
+            <th># of Spins</th>
+            <th>Name</th>
+            <th>Date Fallen</th>
+          </tr>
+        </thead>
+        <tbody id="scores"></tbody>
+      </table>
+    </main>
 
     <footer class="bg-dark text-dark text-muted">
       <div class="container-fluid">
