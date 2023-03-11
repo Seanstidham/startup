@@ -67,15 +67,25 @@ button {
 }
 
 @keyframes spin {
-  
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-
 img {
+  transform-origin: center center;
+}
+
+.spin {
   animation-name: spin;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
+}
+
+img.spin {
+  animation-play-state: running;
+}
+
+img:not(.spin) {
+  visibility: hidden;
 }
