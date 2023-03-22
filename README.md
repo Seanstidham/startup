@@ -86,3 +86,11 @@ displays score when you lose
 Update/notes as of startup js assignment:
 
 Haven't gotten it to blacklist you upon losing yet, I was more focused on getting the main thing to work. Am working on how to do. 
+
+
+
+
+Backend Notes:
+step 1 make sure node and express are installed
+step 2 create an index.js file //make sure it creates a route handler and starts the server
+step 3 run with node.js or probably deployService
