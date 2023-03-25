@@ -94,3 +94,7 @@ Backend Notes:
 step 1 make sure node and express are installed
 step 2 create an index.js file //make sure it creates a route handler and starts the server
 step 3 run with node.js or probably deployService
+
+Simon Backend Note:
+make sure you dont overwrite repositories
+make sure the fetch command works correctly
