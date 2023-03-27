@@ -104,3 +104,4 @@ Backend API & Database Notes for startup:
 - using this storage method and logining in method banning the account might be do-able through listing them as good by default then upon losing switch the account to locked or something
 - will probably have to develop separate css files for each section (not too big)
 - storing scores will probably be similar to Simon
+- I messed up the repository so I might need to initialize it before I edit the code again
