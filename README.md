@@ -98,3 +98,9 @@ step 3 run with node.js or probably deployService
 Simon Backend Note:
 make sure you dont overwrite repositories
 make sure the fetch command works correctly
+
+Backend API & Database Notes for startup:
+- Use a create and login feature similar to Simon though whenever you attempt to hit the login with hitting create the error message specifically tells you to create a name before logining in
+- using this storage method and logining in method banning the account might be do-able through listing them as good by default then upon losing switch the account to locked or something
+- will probably have to develop separate css files for each section (not too big)
+- storing scores will probably be similar to Simon
