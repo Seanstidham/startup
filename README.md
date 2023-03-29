@@ -105,3 +105,12 @@ Backend API & Database Notes for startup:
 - will probably have to develop separate css files for each section (not too big)
 - storing scores will probably be similar to Simon
 - I messed up the repository so I might need to initialize it before I edit the code again
+
+Websocket breakdown as what is happening in peerProxy.js:
+- When a new PeerProxy object is created, it sets up a WebSocket server by creating a new instance of the WebSocketServer class with the noServer option set to true. It also listens for an upgrade event on the HTTP server and handles the protocol upgrade from HTTP to WebSocket using the handleUpgrade method of the WebSocket server instance
+- The PeerProxy class keeps track of all the WebSocket connections in an array called connections. When a new connection is established, it generates a unique ID for the connection using the uuid.v4() function and adds it to the connections array. It then listens for message, close, and pong events on the WebSocket connection
+- When a message event is received, the PeerProxy class iterates through all the connections in the connections array and sends the message to all other connections except the sender.
+- When a close event is received, the PeerProxy class removes the closed connection from the connections array.
+- When a pong event is received, the PeerProxy class marks the connection as alive.
+- The PeerProxy class also sets up a timer using the setInterval function to send ping messages to all connections in the connections array every 10 seconds. If a connection does not respond to a ping message, it is terminated using the terminate method of the WebSocket instance.
+- Finally, the PeerProxy class is exported as a module.
