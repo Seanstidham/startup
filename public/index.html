@@ -33,14 +33,13 @@
         <!-- Displayed when needing authentication -->
         <div id="loginControls">
           <form>
-            <div class="form-group">
-              
+            <div class="form-group mb-3">
               <input type="text" 
-              class="form-control" 
-              id="username" 
-              placeholder="Enter username">
+                     class="form-control" 
+                     id="username" 
+                     placeholder="Enter username">
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
               
               <input type="password" 
               class="form-control" 
@@ -50,11 +49,11 @@
             
           </form>
         </div>
-          <button type="button" class="btn btn-primary" onclick="loginUser()">
-            Login
-          </button>
           <button type="button" class="btn btn-primary" onclick="createUser()">
             Create
+          </button>
+          <button type="button" class="btn btn-primary" onclick="loginUser()">
+            Login
           </button>
         </div>
         <!-- Displayed when ready to play -->
