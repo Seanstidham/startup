@@ -61,6 +61,9 @@ function rotateImage() {
     counterInput.disabled = true;
     saveScore(spinCount);
     updateScore(spinCount);
+
+    // Change background image
+    document.body.style.backgroundImage = 'url("Sun background -Lose.jpg")';
   } else {
     image.classList.add('spin');
     setTimeout(() => {
