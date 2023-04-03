@@ -26,11 +26,11 @@ function getUserByToken(token) {
 
 async function createUser(username, password) {
   // Hash the password before we insert it into the database
-  const passwordHash = await bcrypt.hash(password, 10);
+  //const passwordHash = await bcrypt.hash(password, 10);
 
   const user = {
     username: username,
-    password: passwordHash,
+    password: password,
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
