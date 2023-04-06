@@ -17,22 +17,27 @@
   </head>
   <body class="bg-dark text-light">
     <header class="container-fluid">
-      <nav class="navbar fixed-top navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Wheel of Fun Times</a>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="wheelgame.html">Play</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="scores.html">Scores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="wheelgame.html">Play</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="scores.html">Scores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -48,7 +53,9 @@
         <label for="num-spins"># of spins:</label>
         <input type="text" id="num-spins" value="0" readonly>
       </div>
+      <div class="text-center" id="result-message"></div>
       <script src="game.js"></script>
     </main>
+    
   </body>
 </html>
