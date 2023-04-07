@@ -114,3 +114,6 @@ Websocket breakdown as what is happening in peerProxy.js:
 - When a pong event is received, the PeerProxy class marks the connection as alive.
 - The PeerProxy class also sets up a timer using the setInterval function to send ping messages to all connections in the connections array every 10 seconds. If a connection does not respond to a ping message, it is terminated using the terminate method of the WebSocket instance.
 - Finally, the PeerProxy class is exported as a module.
+Startup notes:
+- In the end I wasnt able to get the auto ban to work, but I got a lot done to where im happy with how it turned out(for a while the databases werent working properly)
+- 
