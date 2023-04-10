@@ -117,3 +117,8 @@ Websocket breakdown as what is happening in peerProxy.js:
 Startup notes:
 - In the end I wasnt able to get the auto ban to work, but I got a lot done to where im happy with how it turned out(for a while the databases werent working properly)
 - 
+
+More Simon Notes:
+- Make sure you re-organize files so that you can convert to react
+- Convert React to Bootstrap
+- install the components into the proper files 
