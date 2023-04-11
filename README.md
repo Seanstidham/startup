@@ -122,3 +122,5 @@ More Simon Notes:
 - Make sure you re-organize files so that you can convert to react
 - Convert React to Bootstrap
 - install the components into the proper files 
+- create and write the app.jsx and the other .jsx files
+- convert everything to react components
