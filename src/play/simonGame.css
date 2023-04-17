@@ -1,104 +1,41 @@
-#count {
-  color: rgb(246, 239, 158);
+h1 {
+  text-align: center;
 }
 
-.game {
-  background: rgb(0, 0, 0);
-  border-radius: 50%;
-  box-shadow: 0 0 20px 5px rgb(69, 69, 69);
-  width: 80vw;
-  height: 80vw;
-  position: absolute;
-  min-width: 300px;
-  min-height: 300px;
-  max-width: min(80vmin, 1000px);
-  max-height: min(80vmin, 1000px);
+img {
+  width: 500px;
+  height: 500px;
 }
 
-.button-container {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.game-button {
-  filter: brightness(50%);
-}
-
-.button-top-left {
-  border-radius: 100% 0 0 0;
-  margin: 20px 0 0 20px;
+button {
+  display: inline-block;
   background-color: green;
-  border: thick solid rgb(36, 53, 0);
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+  
 }
-
-.button-top-right {
-  border-radius: 0 100% 0 0;
-  margin: 20px 20px 0 0;
-  background-color: red;
-  border: thick solid rgb(83, 12, 12);
-}
-
-.button-bottom-left {
-  border-radius: 0 0 0 100%;
-  margin: 0 0 20px 20px;
-  background-color: yellow;
-  border: thick solid rgb(94, 90, 10);
-}
-
-.button-bottom-right {
-  border-radius: 0 0 100% 0;
-  margin: 0 20px 20px 0;
-  background-color: blue;
-  border: thick solid rgb(27, 14, 100);
-}
-
-.light-on {
-  filter: brightness(100%);
-}
-
-.controls {
-  position: absolute;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  background-color: black;
-  padding: 2em;
+body {
   display: flex;
+  flex-direction: column;
+  min-width: 375px;
+    background-image: url("Sun\ Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.text-center {
+  text-align: center;
+}
+
+main {
+  flex: 1 calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column;
-}
-
-.game-name {
-  font-size: 2em;
-  font-weight: normal;
-  margin-bottom: 0.5em;
-}
-
-.game-name sup {
-  font-weight: 100;
-}
-
-.score {
-  position: absolute;
-  text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  font-weight: bold;
-  color: red;
-  cursor: default;
-  width: 50px;
-  height: 30px;
-  border-radius: 10px;
-  border: solid thin rgb(117, 0, 0);
-  background-color: #300;
-}
-
-.center {
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  position: relative;
 }
