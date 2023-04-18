@@ -1,9 +1,9 @@
 {
-  "short_name": "Simon",
-  "name": "Simon",
+  "short_name": "Wheel of Fun Times",
+  "name": "Wheel of fun Times",
   "icons": [
     {
-      "src": "favicon.ico",
+      
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
