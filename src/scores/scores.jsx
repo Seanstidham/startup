@@ -38,7 +38,7 @@ export function Scores() {
   } else {
     scoreRows.push(
       <tr key='0'>
-        <td colSpan='4'>Be the first to score</td>
+        <td colSpan='4'>Be the first to fall</td>
       </tr>
     );
   }
@@ -48,10 +48,10 @@ export function Scores() {
       <table className='table table-warning table-striped-columns'>
         <thead className='table-dark'>
           <tr>
-            <th>#</th>
+            <th>Rank</th>
             <th>Name</th>
-            <th>Score</th>
-            <th>Date</th>
+            <th># of Spins</th>
+            <th>Date Fallen</th>
           </tr>
         </thead>
         <tbody id='scores'>{scoreRows}</tbody>

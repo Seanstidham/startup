@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import Button from 'react-bootstrap/Button';
 import { MessageDialog } from './messageDialog';
 
@@ -19,7 +18,7 @@ export function Unauthenticated(props) {
   async function loginOrCreate(endpoint) {
     const response = await fetch(endpoint, {
       method: 'post',
-      body: JSON.stringify({ email: userName, password: password }),
+      body: JSON.stringify({ userName: userName, password: password }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -43,7 +42,7 @@ export function Unauthenticated(props) {
             type='text'
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
-            placeholder='your@email.com'
+            placeholder='username'
           />
         </div>
         <div className='input-group mb-3'>
