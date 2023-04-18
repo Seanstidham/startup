@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 375px;
-    background-image: url("Sun\ Background.jpg");
+    background-image: url("Sun Background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   
