@@ -6,9 +6,6 @@ export function WheelGame(props) {
   const userName = props.userName;
   const [score, setScore] = React.useState(0);
 
-  function handleButtonPress() {
-    setScore(score + 1);
-  }
 
   return (
     <div className='game'>
