@@ -36,7 +36,7 @@ function App() {
       <header className='container-fluid'>
         <nav className='navbar fixed-top navbar-dark'>
           <div className='navbar-brand'>
-            Simon<sup>&reg;</sup>
+            The Wheel of Fun Times!
           </div>
           <menu className='navbar-nav'>
             <li className='nav-item'>
