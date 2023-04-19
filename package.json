@@ -1,35 +1,19 @@
 {
-  "name": "simon-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^5.2.3",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
-    "react-scripts": "5.0.1"
-  },
-  "proxy": "http://localhost:3000",
+  "name": "simon-service",
+  "version": "1.0.0",
+  "description": "This demonstrates a service for a web application.",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "node index.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.12.0"
   }
 }

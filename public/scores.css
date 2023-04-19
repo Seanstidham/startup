@@ -1,0 +1,91 @@
+td {
+  max-width: 40vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+    background-image: url("Sun\ Background\ -Lose.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+header {
+  flex: 0 80px;
+}
+
+main {
+  flex: 1 calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+footer {
+  flex: 0 30px;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  /*  overwrite Bootstrap so the menu does not wrap */
+  flex-direction: row !important;
+  list-style: none;
+}
+
+.navbar-brand {
+  padding-left: 0.3em;
+  border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+menu .nav-item {
+  padding: 0 0.3em;
+}
+
+footer a {
+  float: right;
+}
+
+.sun {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: -75px;
+  left: calc(50% - 75px);
+  z-index: 1;
+  box-shadow: 0 0 50px 10px rgba(255, 255, 0, 0.5);
+}
+
+.sky {
+  flex: 1;
+  background: linear-gradient(to bottom, #4aaeff, #78c4ff);
+  position: relative;
+  z-index: 0;
+}
+
+.meadow {
+  flex: 1;
+  background: linear-gradient(to top, #3b5323, #5f9f4a);
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-height: 600px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 100vh;
+  }
+}
