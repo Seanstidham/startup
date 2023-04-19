@@ -30,7 +30,7 @@ async function createUser(username, password) {
 
   const user = {
     username: username,
-    password: passwordHash,
+    password: password,
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
